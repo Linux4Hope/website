@@ -1,0 +1,13 @@
+# A static site
+services:
+    - type: web
+      name: linux4hope-website
+      env: static
+      buildCommand: test -f site/index.html # test if index.html exists
+      staticPublishPath: ./site
+      pullRequestPreviewsEnabled: true  # we want pr previews from render.com
+      headers:
+      - path: /*
+        name: X-Frame-Options
+        value: sameorigin # the page can only be displayed in the frame on the same origin as the page itself
+      autoDeploy: true
