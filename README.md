@@ -1,2 +1,3 @@
-# website
-Website for the Organization
+# Website
+
+Linux4Hope's main website repository.
